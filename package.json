@@ -23,7 +23,6 @@
     "url": "https://github.com/Zhirrr/Zhirrr-Api/issues"
   },
   "dependencies": {
-    "@lolikillers/aexm-api": "github:Aexm47/AEXM47",
     "axios": "^0.21.1",
     "brainly-scraper-v2": "^1.1.2",
     "base-64": "^1.0.0",
