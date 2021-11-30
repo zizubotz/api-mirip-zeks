@@ -13,7 +13,7 @@
 */
 __path = process.cwd()
 
-var aexm = require('@lolikillers/aexm-api');
+//var aexm = require('@lolikillers/aexm-api');
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
@@ -39,7 +39,7 @@ var router  = express.Router();
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js')
 var options = require(__path + '/lib/options.js');
-var { tts, wait, simih, getBuffer, h2k, banner, getRandom, start, info, success, close, pickRandom } = require(__path + '/lib/functions.js');
+var { getBuffer } = require(__path + '/lib/functions.js');
 
 var {
 	Vokal,
