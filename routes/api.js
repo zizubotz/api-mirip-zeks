@@ -19,7 +19,7 @@ var db = require(__path + '/database/db');
 try {
 var kuhong = db.get('ojan'); // jan diubah
 } catch (e) {
-	console.log('WELCOME TO GX API!') // boleh diubah
+	console.log('WELCOME TO MY API!') // boleh diubah
 }
 
 
@@ -38,6 +38,7 @@ var router  = express.Router();
 var creator = 'ZeeoneOfc' // ubah jadi nama lu
 const listkey = ["Alphabot","Zeeone","ZeeoneOfc"]; // ubah apikey nya, tambah aja klo mau
 
+var { otakudesu, covid, ongoing, komiku, tebakgambar, surah, sholat, lirik, chara,wattpad, playstore, linkwa, pinterest ,igdl,igstory, igstalk,twitter,fbdown,youtube,ttdownloader} = require(__path + '/lib/scrape.js');
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js')
 var options = require(__path + '/lib/options.js');
@@ -505,7 +506,7 @@ router.get('/download/instagram', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
-       aexm.igdl(url)
+       igdl(url)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -526,7 +527,7 @@ router.get('/download/pinterest', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter q"})
         if(listkey.includes(apikey)){
-       aexm.pinterest(q)
+       pinterest(q)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -547,7 +548,7 @@ router.get('/download/tiktok', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
-       aexm.ttdownloader(url)
+       ttdownloader(url)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -568,7 +569,7 @@ router.get('/download/ytmp3', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
-       aexm.youtube(url)
+       youtube(url)
 			.then(data => {
 		var result = data;
 		res.json({
@@ -1849,7 +1850,7 @@ router.get('/search/wallpaper', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
-       aexm.chara(text)
+       chara(text)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -1870,7 +1871,7 @@ router.get('/search/wattpad', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
-       aexm.wattpad(text)
+       wattpad(text)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -1891,7 +1892,7 @@ router.get('/search/komiku', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
-       aexm.komiku(text)
+       komiku(text)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -1912,7 +1913,7 @@ router.get('/search/otaku', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
-       aexm.otakudesu(text)
+       otakudesu(text)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -2820,7 +2821,7 @@ router.get('/game/tebakgambar', async (req, res, next) => {
        	var text = req.query.page
        	if(!apikey) return res.json(loghandler.apikey)
         if(listkey.includes(apikey)){
-       aexm.tebakgambar()
+       tebakgambar()
 	.then(data => {
 		var result = data;
 		res.json({
