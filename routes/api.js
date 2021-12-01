@@ -504,9 +504,31 @@ router.get('/download/instagram', async (req, res, next) => {
           var apikey = req.query.apikey
           var url = req.query.url
        	if(!apikey) return res.json(loghandler.apikey)
+       if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
+        if(listkey.includes(apikey)){
+       igstory(url)
+	.then(data => {
+		var result = data;
+		res.json({
+			result
+		})
+		})
+         .catch(e => {
+         	console.log(e);
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.apikey)
+}
+})
+router.get('/download/igstory', async (req, res, next) => {
+          var apikey = req.query.apikey
+          var url = req.query.username
+       	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
         if(listkey.includes(apikey)){
-       igdl(url)
+       igstory
+       (url)
 	.then(data => {
 		var result = data;
 		res.json({
@@ -1987,31 +2009,6 @@ router.get('/anime/samehadaku_genre', async (req, res, next) => {
        if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})      
          if(listkey.includes(apikey)){
        fetch(encodeURI(`https://arnz-samehadaku.herokuapp.com/genre/${text}`))
-        .then(response => response.json())
-        .then(data => {
-        var data = data;
-             res.json({
-             	data,
-             	message: `Ok`,
-             	status: `Success`,
-             	maintanied_by: `${creator}`
-             })
-         })
-         .catch(e => {
-         	console.log(e);
-         	res.json(loghandler.error)
-})
-} else {
-  res.json(loghandler.apikey)
-}
-})
-router.get('/anime/samehadaku_page', async (req, res, next) => {
-          var apikey = req.query.apikey
-       	var text = req.query.page
-       	if(!apikey) return res.json(loghandler.apikey)
-       if (!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter page"})      
-         if(listkey.includes(apikey)){
-       fetch(encodeURI(`https://arnz-samehadaku.herokuapp.com/page/${text}`))
         .then(response => response.json())
         .then(data => {
         var data = data;
