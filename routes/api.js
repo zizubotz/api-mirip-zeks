@@ -527,7 +527,7 @@ router.get('/download/pinterest', async (req, res, next) => {
        	if(!apikey) return res.json(loghandler.apikey)
        if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter q"})
         if(listkey.includes(apikey)){
-       pinterest(q)
+       pinterest(url)
 	.then(data => {
 		var result = data;
 		res.json({
