@@ -4,11 +4,10 @@
 
 // Thanks to ( jgn di hapus jamet)
 /*
-<p> Loli Killers</p>
-<p> Rynz</p>
 <p> Eka Danuarta</p>
+<p> Ojan</p>
+<p> Farhan</p>
 <p> ZeeoneOfc </p>
-<p> Creative Time [ For Template ]</p>
 <p> ALL HUMAN</p>
 */
 __path = process.cwd()
