@@ -36,10 +36,10 @@
 
 ## ```How to install```
 
-[`Click Here For Tutorial`](https://youtu.be/POjBjZx9tvY)<br>
+[`Click Here For Tutorial`](https://youtu.be/BCY6V2PDDEA)<br>
 
 <p align="center">
-  <a href="https://youtu.be/POjBjZx9tvY"><img src="https://f.top4top.io/p_207542cfh1.jpg" />
+  <a href="https://youtu.be/BCY6V2PDDEA"><img src="https://telegra.ph/file/a5f2d77a88420560ed8c5.jpg" />
 </p>
 
 
