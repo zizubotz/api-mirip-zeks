@@ -48,7 +48,7 @@
 
 - [`SAWERIA`](https://saweria.co/zeeoneofc)
 
-## ```Thnaks To```
+## ```Thanks To```
 
 - [`Zahir`]()
 - [`Eka`]()
