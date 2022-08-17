@@ -23,7 +23,6 @@ var request = require('request');
 var fs = require('fs');
 var router  = express.Router();
 var creator = 'Zizu' // ubah jadi nama lu
-const listkey = ["Zizu","zizuanjay","ZeeoneOfc"]; // 
 var router  = express.Router();
 var { TiktokDownloader } = require('../lib/tiktokdl.js')
 var { color, bgcolor } = require(__path + '/lib/color.js');
