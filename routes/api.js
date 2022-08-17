@@ -1,28 +1,29 @@
 __path = process.cwd()
-//var favicon = require('serve-favicon');
+
+//var aexm = require('@lolikillers/aexm-api');
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
-var zahirr = db.get("zahirr");
+var kuhong = db.get('ojan'); // jan diubah
 } catch (e) {
-	console.log('')  
+	console.log('WELCOME TO MY API!') // boleh diubah
 }
- 
-var creator = "Zizu"
-var neoxr = "yntkts"
-var zeks = "administrator"
-var zeks2 = "apivinz"
+
+
+var axios = require('axios');
+var qs = require('qs');
+var ytdl = require('ytdl-core');
+var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
 var cors = require('cors');
+var scrapeYt = require("scrape-yt");
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
-var zrapi = require("zrapi");
-var dotenv = require("dotenv").config()
 var fs = require('fs');
-var TikTokScraper = require('tiktok-scraper');
-var { EmojiAPI } = require("emoji-api");
-var emoji = new EmojiAPI();
+var router  = express.Router();
+var creator = 'Zizu' // ubah jadi nama lu
+const listkey = ["Zizu","zizuanjay","ZeeoneOfc"]; // 
 var router  = express.Router();
 var { TiktokDownloader } = require('../lib/tiktokdl.js')
 var { color, bgcolor } = require(__path + '/lib/color.js');
